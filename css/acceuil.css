@@ -154,6 +154,7 @@ footer input:first-child{
 footer textarea{
     width: 40vw;
     height: 37vh;
+    resize: none;
     margin-bottom: 0;
     padding-bottom: 0;
     border-radius: 10px;
