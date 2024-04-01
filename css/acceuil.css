@@ -357,6 +357,7 @@ input[type="submit"]{
     .contact-link div{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         width: 100%;
     }
@@ -410,5 +411,23 @@ input[type="submit"]{
 
     h1{
         font-size: 1.5em;
+    }
+}
+
+h1,img,.service div,h2{
+    animation: reveal;
+    animation-timeline: view();
+    animation-range-end: 50%;
+}
+
+@keyframes reveal {
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1 ;
     }
 }
