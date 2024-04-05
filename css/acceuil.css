@@ -33,13 +33,26 @@
 .acceuil button {
     width: 190px;
     height: 60px;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: #D9AA00;
+}
+
+.acceuil button,input[type="submit"]{
+    transition: 200ms;
+    font-size: 1em;
+}
+
+.acceuil button:hover ,input[type="submit"]:hover{
+    box-shadow: 5px 5px 5px white;
+    cursor: pointer;
+}
+.acceuil button:active ,input[type="submit"]:active{
+    box-shadow: 2px 2px 5px white;
 }
 
 .acceuil button a{
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 
@@ -50,16 +63,19 @@
 
 
 /* services */
+.header-service{
+    background-color: #F8F9FA;
+    margin: 0;
+    padding-top: 70px;
+}
 
 .service{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 90px;
     padding: 90px;
     flex-wrap: wrap;
-    gap: 20px;
-    row-gap: 80px;
+    row-gap: 20px;
     background-color: #F8F9FA;
 }
 
@@ -71,34 +87,55 @@ h1{
 
 .service div{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    width: 22vw;
-    height: 201px;
-    border-radius: 15px;
-    background-size: contain;
+    width: 25vw;
+    height: 300px;
+    /* border-radius: 15px; */
+    overflow: hidden;
+    background-size: 100% 100%;
+    box-shadow: 2px 0px 5px black;
     
+}
+
+.service .one{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.5);
+    color: rgba(255, 255, 255,1);
+    font-size: 1.2em;
+    right: -100%;
+    transition: 400ms;
 }
 
 .service a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
     transition: 500ms;
-    
     text-decoration: none;
 }
 
-.service a :hover{
-    opacity: 0.8;
+.service a:hover .one{
+    /* opacity: 0; */
+    right: 0;
 }
 
-.service div p{
+.service a p{
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
-    color:  #D9AA00;
+    color:  #212529;
     font-family: "Montserrat";
     text-align: center;
     line-height: 30px;
-    text-shadow: 5px 5px 5px black;
+    /* text-shadow: 5px 5px 5px black; */
 }
 
 .service a:nth-child(1) div{
@@ -144,16 +181,20 @@ h1{
 }
 
 /* equipe */
-.equipe h2{
-    text-align: center;
-    text-decoration: underline;
+.equipe{
+    display: flex;
+    /* overflow-x:scroll;         */
+    /* animation: carousel linear 10s infinite alternate; */
 }
 
-.equipe .direction,.dep-info,.marketing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+@keyframes carousel {
+    from{
+        transform: translateX(0);
+    }
+    
+    to{
+        transform: translateX(-1000%);
+    }
 }
 
 .equipe figure{
@@ -161,6 +202,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: carousel linear 50s infinite alternate;
 }
 
 .equipe figure img{
@@ -168,6 +210,7 @@ h1{
     border: 0.5rem solid #DFE0E1;
     width: 224px;
     height: 224px;
+    box-shadow: 2px 0px 5px black;
 }
 
 .equipe figcaption{
@@ -251,7 +294,7 @@ input[type="submit"]{
     width: 230px;
     height: 60px;
     margin-top: 50px;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: #D9AA00;
     color: white;
 }
@@ -259,6 +302,7 @@ input[type="submit"]{
 .contact-link{
     display: flex;
     justify-content: space-between;
+    font-family: "Montserrat";
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
@@ -269,6 +313,7 @@ input[type="submit"]{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     width: 2.5rem;
     height: 2.5rem;
     background-color: #212529;
@@ -280,30 +325,33 @@ input[type="submit"]{
     opacity: 0.8;
 }
 
-.fa-brands{
+.fa-brands,.fa{
     color: white;
 }
 
-.fa-whatsapp:hover{
+.contact-link div:nth-of-type(2) a:hover .fa-whatsapp{
     color: rgb(44, 230, 20);
 }
 
-.fa-facebook:hover{
+.contact-link div:nth-of-type(2) a:hover .fa-facebook{
     color: blue;
 }
 
-.fa-twitter:hover{
+.contact-link div:nth-of-type(2) a:hover .fa-twitter{
     color: #00ACEE;
 }
 
-.fa-linkedin:hover{
+.contact-link div:nth-of-type(2) a:hover .fa-linkedin{
     color: rgb(18, 23, 73);
 }
 
-.fa-instagram:hover{
+.contact-link div:nth-of-type(2) a:hover .fa-instagram{
     color: #8A3AB9;
 }
 
+.contact-link div:nth-of-type(2) a:hover .fa-envelope{
+    color: salmon;
+}
 
 
 .contact-link div:last-of-type a{
@@ -382,10 +430,10 @@ input[type="submit"]{
     padding: 0;
 }
 
-    .service div{
+    /* .service div{
         width: 190px;
         height: 130px;
-    }
+    } */
 
     .service div p{
         font-size: 1.2em;
@@ -414,10 +462,18 @@ input[type="submit"]{
     }
 }
 
-h1,img,.service div,h2{
+h1,h2,img,.service div,.acceuil p{
     animation: reveal;
     animation-timeline: view();
     animation-range-end: 50%;
+}
+
+.acceuil p:first-of-type{
+    animation: comme-left 3s;
+}
+
+.acceuil p:last-of-type{
+    animation: comme-rigth 4s;
 }
 
 @keyframes reveal {
@@ -429,5 +485,29 @@ h1,img,.service div,h2{
     to{
         transform: scale(1);
         opacity: 1 ;
+    }
+}
+
+@keyframes comme-left {
+    from{
+        transform: scale(0) translateX(-1000px);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1) translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes comme-rigth {
+    from{
+        transform: scale(0) translateX(1000px);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1) translateX(0);
+        opacity: 1;
     }
 }

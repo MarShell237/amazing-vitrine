@@ -4,3 +4,5 @@ toggle_menu.onclick = function(){
     toggle_menu.classList.toggle('active');
     menu.classList.toggle('responsive');
 }
+
+const p1 = document.querySelector('.acceuil ') 
