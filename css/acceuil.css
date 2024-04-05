@@ -181,10 +181,12 @@ h1{
 }
 
 /* equipe */
-.equipe{
+.anim{
     display: flex;
-    /* overflow-x:scroll;         */
-    /* animation: carousel linear 10s infinite alternate; */
+}
+
+.equipe{
+    overflow-x: hidden;
 }
 
 @keyframes carousel {
@@ -429,11 +431,6 @@ input[type="submit"]{
 .service{
     padding: 0;
 }
-
-    /* .service div{
-        width: 190px;
-        height: 130px;
-    } */
 
     .service div p{
         font-size: 1.2em;
