@@ -3,6 +3,7 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body{
@@ -21,7 +22,7 @@ nav{
     left: 0;
 }
 
-nav > img{
+nav > a  img{
     display: none;
 }
 
@@ -74,6 +75,70 @@ nav ul .cta:active{
     box-shadow: 0 0 0 2px #D9AA00;
 }
 
+/* footer */
+.contact-link{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat";
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: large;
+}
+
+.contact-link div:nth-of-type(2) a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #212529;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.contact-link div:nth-of-type(2) a:hover{
+    opacity: 0.8;
+}
+
+.fa-brands,.fa{
+    color: white;
+}
+
+.contact-link div:nth-of-type(2) a:hover .fa-whatsapp{
+    color: rgb(44, 230, 20);
+}
+
+.contact-link div:nth-of-type(2) a:hover .fa-facebook{
+    color: blue;
+}
+
+.contact-link div:nth-of-type(2) a:hover .fa-twitter{
+    color: #00ACEE;
+}
+
+.contact-link div:nth-of-type(2) a:hover .fa-linkedin{
+    color: rgb(18, 23, 73);
+}
+
+.contact-link div:nth-of-type(2) a:hover .fa-instagram{
+    color: #8A3AB9;
+}
+
+.contact-link div:nth-of-type(2) a:hover .fa-envelope{
+    color: salmon;
+}
+
+
+.contact-link div:last-of-type a{
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    text-decoration: none;
+    color: black;
+}
+
 @media screen and (max-width:768px) {
     nav ul.menu{
         display: none;
@@ -94,7 +159,7 @@ nav ul .cta:active{
         background-color: #212529;
     }
 
-    nav > img{
+    nav > a img{
         display: initial;
     }
     
@@ -176,6 +241,15 @@ nav ul .cta:active{
     }
     nav ul li a:hover {
         scale: 100%;
+    }
+
+    /* footer */    
+    .contact-link div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
     
 }

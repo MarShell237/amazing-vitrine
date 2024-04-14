@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+section:first-of-type{
+    margin-top: 90px;
+    padding: 5px 150px;
+}
+
+.bye{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(to right, #4094CE,#D9AA00);
+}
+
+.bye p{
+    font-family: "montserrat";
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.bye button {
+    width: 190px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #D9AA00;
+}
+
+.bye button:hover {
+    box-shadow: 0 0 5px white;
+    cursor: pointer;
+}
+.bye button:active{
+    box-shadow: 2px 2px 5px white;
+}
+
+.bye button a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+@media screen and (max-width:375px) {
+    section:first-of-type{
+        padding: 0 5px;
+        /* width: 100vw; */
+        /* background-color: red; */
+    }
+
+    .bye p{
+        font-size: initial;
+    }
+}
