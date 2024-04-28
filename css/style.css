@@ -127,7 +127,11 @@ nav ul .cta:active{
 }
 
 .contact-link div:nth-of-type(2) a:hover .fa-envelope{
-    color: salmon;
+    color: lightblue;
+}
+
+.contact-link div:nth-of-type(2) a:hover .fa-youtube{
+    color: red;
 }
 
 
