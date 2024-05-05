@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+body{
+    text-align: justify;
+}
+
+h1,h2{
+    text-align: center;
+    text-decoration: underline;
+}
 section:first-of-type{
     margin-top: 90px;
     padding: 5px 150px;
